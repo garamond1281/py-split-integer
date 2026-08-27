@@ -19,3 +19,9 @@ def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
 
 def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
     assert split_integer(3, 5) == [0, 0, 1, 1, 1]
+
+def test_should_return_an_array_containing_exactly_number_of_parts() -> None:
+    assert len(split_integer(10, 3)) == 3
+
+def test_the_difference_between_the_max_and_min_number_in_the_array() -> None:
+    assert max(split_integer(10, 3)) - min(split_integer(10, 3)) <= 1
